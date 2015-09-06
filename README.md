@@ -33,6 +33,45 @@ yield this
   .target("test")
 ```
 
+before
+
+```html
+<html>
+<head>
+  <!-- build:css css/combined.css -->
+  <link href="css/one.css" rel="stylesheet">
+  <link href="css/two.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body>
+  <!-- build:js scripts/combined.js -->
+  <script type="text/javascript" src="scripts/one.js"></script>
+  <script type="text/javascript" src="scripts/two.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/async.js async data-foo="bar" -->
+  <script type="text/javascript" src="scripts/three.js"></script>
+  <script type="text/javascript" src="scripts/four.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
+```
+
+after
+
+```html
+<html>
+<head>
+  <link rel="stylesheet" href="css/combined.css">
+</head>
+<body>
+  <script src="scripts/combined.js"></script>
+
+  <script src="scripts/async.js" async data-foo="bar"></script>
+</body>
+</html>
+```
+
 # License
 
 [MIT][mit] © [Tomoyuki Kashiro][author] et [al][contributors]
