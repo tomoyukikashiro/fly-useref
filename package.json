@@ -1,0 +1,35 @@
+{
+  "name": "fly-useref",
+  "version": "0.1.0",
+  "description": "useref plugin for Fly",
+  "license": "MIT",
+  "homepage": "https://github.com/kashiro/fly-useref",
+  "repository": "https://github.com/kashiro/fly-useref",
+  "bugs": "https://github.com/kashiro/fly-useref/issues",
+  "contributors": "https://github.com/kashiro/fly-useref/graphs/contributors",
+  "main": "index.js",
+  "scripts": {
+    "test": "fly && node test/test.js"
+  },
+  "keywords": [
+    "fly",
+    "node-useref"
+  ],
+  "author": {
+    "name": "Tomoyuki Kashiro",
+    "email": "ksrtmyk@gmail.com",
+    "url": "http://kashiro.github.com"
+  },
+  "dependencies": {
+    "node-useref": "^0.3.15",
+    "object-assign": "^3.0.0"
+  },
+  "devDependencies": {
+    "fly": "^0.7.1",
+    "fly-useref": "./"
+  },
+  "engines": {
+    "iojs": ">= 1.0.0",
+    "node": ">= 0.11.0"
+  }
+}
